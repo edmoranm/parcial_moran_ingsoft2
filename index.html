@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #b3c21365;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+        color: #333;
+    }
+    
+    form {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    form label, form input, form button {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    ul li {
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    }
+    
+    .completed {
+        text-decoration: line-through;
+        color: #999;
+    }
+    
+    .alert {
+        background-color: #b5ff07f4;
+        color: #333;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>LISTA DE TAREAS</h1>
+        <form id="task-form">
+            <label for="task">Tarea:</label>
+            <input type="text" id="task" required>
+            <label for="time">Tiempo aproximado (minutos):</label>
+            <input type="number" id="time" required>
+            <button type="submit">Agregar Tarea</button>
+        </form>
+        <ul id="task-list"></ul>
+        <p id="total-time"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
